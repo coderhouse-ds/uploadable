@@ -1,0 +1,114 @@
+{% extends "layout.html" %} {% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: rgb(29, 29, 29);
+        }
+        
+        .post .content {
+            display: flex;
+            flex-direction: column;
+            border-bottom: 2px solid #999;
+        }
+        
+        .post #img img {
+            width: 200px;
+            height: 200px;
+            padding-right: 10px;
+        }
+        
+        .post .content h1 a {
+            color: white;
+            font-size: 50px;
+            text-decoration: none;
+        }
+        
+        .post .content h1 a:hover {
+            color: #3dbff3;
+        }
+        
+        .post .content p {
+            color: #999;
+            font-size: 18px;
+            padding:20px 0px;
+        }
+        
+        .post {
+            width: 900px;
+            /* display: inline-block; */
+            /* position: fixed; */
+            margin: auto;
+            padding:20px 20px;
+        }
+        
+        .pagebtns {
+            width: 900px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            position: relative;
+            /* left: 35.5%; */
+            margin: auto;
+            margin-top: 20px;
+        }
+        
+        .pagebtns a {
+            text-decoration: none;
+            color: #3dbff3;
+            font-size: 22px;
+            font-weight: 600;
+            box-shadow: 1px 2px 4px 4px rgb(83 82 82);
+            padding: 10px 20px;
+        }
+        
+        @media(max-width:900px) {
+            .post {
+                width: 400px;
+            }
+            .pagebtns {
+                width: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="post">
+        <div class="content">
+            <h1><a href="/index.html">{{post.title}}</a></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis suscipit odit cupiditate eos aut sequi modi deleniti voluptas veritatis at quibusdam praesentium necessitatibus aliquam dolore unde libero quod explicabo debitis, expedita
+                sapiente? Et nam reiciendis sit eligendi! Aut sit id ab culpa, doloremque ut voluptatibus nulla at ipsam ipsa sapiente.</p>
+            <hr>
+        </div>
+    </div>
+    <div class="post">
+        <div class="content">
+            <h1><a href="">Title here</a></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis suscipit odit cupiditate eos aut sequi modi deleniti voluptas veritatis at quibusdam praesentium necessitatibus aliquam dolore unde libero quod explicabo debitis, expedita
+                sapiente? Et nam reiciendis sit eligendi! Aut sit id ab culpa, doloremque ut voluptatibus nulla at ipsam ipsa sapiente.</p>
+            <hr>
+        </div>
+    </div>
+    <div class="post">
+        <div class="content">
+            <h1><a href="">Title here</a></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis suscipit odit cupiditate eos aut sequi modi deleniti voluptas veritatis at quibusdam praesentium necessitatibus aliquam dolore unde libero quod explicabo debitis, expedita
+                sapiente? Et nam reiciendis sit eligendi! Aut sit id ab culpa, doloremque ut voluptatibus nulla at ipsam ipsa sapiente.</p>
+            <hr>
+        </div>
+    </div>
+    <div class="pagebtns">
+        <a href="">Previous</a>
+        <a href="">Next</a>
+    </div>
+</body>
+
+</html>
+{% endblock %}

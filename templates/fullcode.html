@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/fullcode.css')}}">
+    <style>
+
+    </style>
+</head>
+
+<body method='GET'>
+    <h1 id="heading">{{post.title}}</h1>
+    <p id="content"> {{post.content}}</p>
+    <div class="text-boxes">
+        <div class="text-box HTMLBox">
+            <div class="topic">{{post.code1_title}}</div>
+            <textarea id="HTMLBox" readonly>
+                    {{post.code1}}
+            </textarea>
+            <button id="HTMLButton">Copy code</button>
+        </div>
+    </div>
+    <div class="text-boxes2">
+        <div class="text-box2 HTMLBox2">
+            <div class="topic2">{{post.code2_title}}</div>
+            <textarea id="HTMLBox2" readonly>
+{{post.code2}}
+            </textarea>
+            <button id="HTMLButton2">Copy code</button>
+        </div>
+    </div>
+    <div class="text-boxes3">
+        <div class="text-box3 HTMLBox3">
+            <div class="topic3">{{post.code3_title}}</div>
+            <textarea id="HTMLBox3" readonly>
+{{post.code3}}
+            </textarea>
+            <button id="HTMLButton3">Copy code</button>
+        </div>
+    </div>
+    <script>
+        let HTMLBox = document.getElementById("HTMLBox");
+        let HTMLBUtton = document.getElementById("HTMLButton");
+
+        HTMLBUtton.onclick = function() {
+            HTMLBox.select();
+            document.execCommand("copy");
+            HTMLButton.innerText = "Code Copied"
+        }
+        let HTMLBox2 = document.getElementById("HTMLBox2");
+        let HTMLBUtton2 = document.getElementById("HTMLButton2");
+
+        HTMLBUtton2.onclick = function() {
+            HTMLBox2.select();
+            document.execCommand("copy");
+            HTMLButton2.innerText = "Code Copied"
+        }
+        let HTMLBox3 = document.getElementById("HTMLBox3");
+        let HTMLBUtton3 = document.getElementById("HTMLButton3");
+
+        HTMLBUtton3.onclick = function() {
+            HTMLBox3.select();
+            document.execCommand("copy");
+            HTMLButton3.innerText = "Code Copied"
+        }
+    </script>
+</body>
+
+</html>
+{% endblock %}

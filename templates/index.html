@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+
+    <div class="heading">
+        WELCOME TO MY REFERENCE
+    </div>
+    <div class="banner">
+        <h1 class="bantitle">Featured Posts</h1>
+        <div class="cards">
+            <div class="card1">
+                <h1>MY REFERENCE is</h1>
+                <h3>This is tagline</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, veniam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, veniam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, veniam?Lorem ipsum dolor sit,
+                    amet consectetur adipisicing elit. Ipsa, veniam?</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="card2">
+                <h1>MY REFERENCE</h1>
+                <h3>This is tagline</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, veniam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, veniam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, veniam?Lorem ipsum dolor sit,
+                    amet consectetur adipisicing elit. Ipsa, veniam?</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="card3">
+                <h1>MY REFERENCE</h1>
+                <h3>This is tagline</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, veniam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, veniam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, veniam?Lorem ipsum dolor sit,
+                    amet consectetur adipisicing elit. Ipsa, veniam?</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div class="categories">
+        <h1>Categories</h1>
+    </div>
+    <div class="catscardrow1">
+        <div class="card1">
+            <img src="{{url_for('static',filename='images/web.png')}}" alt="">
+            <h1>Web development</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex quasi dicta ullam soluta voluptatem doloribus perspiciatis, repudiandae id quibusdam nam. Tempore iure delectus quibusdam vitae nulla odio quae minus. Nesciunt eum tenetur quos distinctio
+                eius, fugiat eaque est et illum non dolorem voluptatum! Inventore dicta ex qui porro corrupti saepe? Quas repellat culpa deleniti ratione quaerat, odio earum quis consequatur consequuntur vitae veritatis libero. Repudiandae reprehenderit,
+                optio nemo fugit dolores nihil. Suscipit maiores veritatis quos minima dolorem deleniti ab deserunt magnam, debitis, repellendus tempore laboriosam voluptatum quaerat, in sequi. Reiciendis.</p>
+                <div class="btns">
+            <a href="/webdevelopment/lt/showinfo">Learning Tutorials</a>
+            <a href="/webdevelopment/pr/showinfo">Projects</a>
+            </div>
+        </div>
+        <div class="card1">
+            <img src="{{url_for('static',filename='images/python.png')}}" alt="">
+            <h1>Python</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex quasi dicta ullam soluta voluptatem doloribus perspiciatis, repudiandae id quibusdam nam. Tempore iure delectus quibusdam vitae nulla odio quae minus. Nesciunt eum tenetur quos distinctio
+                eius, fugiat eaque est et illum non dolorem voluptatum! Inventore dicta ex qui porro corrupti saepe? Quas repellat culpa deleniti ratione quaerat, odio earum quis consequatur consequuntur vitae veritatis libero. Repudiandae reprehenderit,
+                optio nemo fugit dolores nihil. Suscipit maiores veritatis quos minima dolorem deleniti ab deserunt magnam, debitis, repellendus tempore laboriosam voluptatum quaerat, in sequi. Reiciendis.</p>
+                 <div class="btns">
+            <a href="/python/lt/showinfo">Learning Tutorials</a>
+            <a href="/python/pr/showinfo">Projects</a>
+            </div>
+        </div>
+        <div class="card1">
+            <img src="{{url_for('static',filename='images/gui.jfif')}}" alt="">
+            <h1>TKinter GUI</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex quasi dicta ullam soluta voluptatem doloribus perspiciatis, repudiandae id quibusdam nam. Tempore iure delectus quibusdam vitae nulla odio quae minus. Nesciunt eum tenetur quos distinctio
+                eius, fugiat eaque est et illum non dolorem voluptatum! Inventore dicta ex qui porro corrupti saepe? Quas repellat culpa deleniti ratione quaerat, odio earum quis consequatur consequuntur vitae veritatis libero. Repudiandae reprehenderit,
+                optio nemo fugit dolores nihil. Suscipit maiores veritatis quos minima dolorem deleniti ab deserunt magnam, debitis, repellendus tempore laboriosam voluptatum quaerat, in sequi. Reiciendis.</p>
+                 <div class="btns">
+            <a href="/tkinter/lt/showinfo">Learning Tutorials</a>
+            <a href="/tkinter/pr/showinfo">Projects</a>
+            </div>
+        </div>
+    </div>
+    <div class="catscardrow2">
+        <div class="card2">
+            <img src="{{url_for('static',filename='images/java.png')}}" alt="">
+            <h1>Java core</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex quasi dicta ullam soluta voluptatem doloribus perspiciatis, repudiandae id quibusdam nam. Tempore iure delectus quibusdam vitae nulla odio quae minus. Nesciunt eum tenetur quos distinctio
+                eius, fugiat eaque est et illum non dolorem voluptatum! Inventore dicta ex qui porro corrupti saepe? Quas repellat culpa deleniti ratione quaerat, odio earum quis consequatur consequuntur vitae veritatis libero. Repudiandae reprehenderit,
+                optio nemo fugit dolores nihil. Suscipit maiores veritatis quos minima dolorem deleniti ab deserunt magnam, debitis, repellendus tempore laboriosam voluptatum quaerat, in sequi. Reiciendis.</p>
+                <div class="btns">
+            <a href="/javacore/lt/showinfo">Learning Tutorials</a>
+            <a href="/javacore/pr/showinfo">Projects</a>
+            </div>
+        </div>
+        <div class="card2">
+            <img src="{{url_for('static',filename='images/c.png')}}" alt="">
+            <h1>C</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex quasi dicta ullam soluta voluptatem doloribus perspiciatis, repudiandae id quibusdam nam. Tempore iure delectus quibusdam vitae nulla odio quae minus. Nesciunt eum tenetur quos distinctio
+                eius, fugiat eaque est et illum non dolorem voluptatum! Inventore dicta ex qui porro corrupti saepe? Quas repellat culpa deleniti ratione quaerat, odio earum quis consequatur consequuntur vitae veritatis libero. Repudiandae reprehenderit,
+                optio nemo fugit dolores nihil. Suscipit maiores veritatis quos minima dolorem deleniti ab deserunt magnam, debitis, repellendus tempore laboriosam voluptatum quaerat, in sequi. Reiciendis.</p>
+                <div class="btns">
+            <a href="/c/lt/showinfo">Learning Tutorials</a>
+            <a href="/c/pr/showinfo">Projects</a>
+            </div>
+        </div>
+        <div class="card2">
+            <img src="{{url_for('static',filename='images/js.png')}}" alt="">
+            <h1>Javascript</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex quasi dicta ullam soluta voluptatem doloribus perspiciatis, repudiandae id quibusdam nam. Tempore iure delectus quibusdam vitae nulla odio quae minus. Nesciunt eum tenetur quos distinctio
+                eius, fugiat eaque est et illum non dolorem voluptatum! Inventore dicta ex qui porro corrupti saepe? Quas repellat culpa deleniti ratione quaerat, odio earum quis consequatur consequuntur vitae veritatis libero. Repudiandae reprehenderit,
+                optio nemo fugit dolores nihil. Suscipit maiores veritatis quos minima dolorem deleniti ab deserunt magnam, debitis, repellendus tempore laboriosam voluptatum quaerat, in sequi. Reiciendis.</p>
+                <div class="btns">
+            <a href="/Javascript/lt/showinfo">Learning Tutorials</a>
+            <a href="/Javascript/pr/showinfo">Projects</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+{% endblock %}

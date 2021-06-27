@@ -1,0 +1,110 @@
+{% extends "layout.html" %} {% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: rgb(29, 29, 29);
+        }
+        
+        .post .content {
+            display: flex;
+            flex-direction: column;
+            border-bottom: 2px solid #999;
+        }
+        
+        .post #img img {
+            width: 200px;
+            height: 200px;
+            padding-right: 10px;
+        }
+        
+        .post .content h1 a {
+            color: white;
+            font-size: 50px;
+            text-decoration: none;
+            background:none;
+        }
+        
+        .post .content h1 a:hover {
+            color: #3dbff3;
+        }
+        .post .content span{
+            color: #999;
+            font-size:18px;
+            text-decoration: none;
+            background: none;
+            padding: 10px 0;
+        }
+        
+        .post .content p {
+            color: #999;
+            font-size: 18px;
+            padding:20px 0px;
+        }
+        
+        .post {
+            width: 900px;
+            /* display: inline-block; */
+            /* position: fixed; */
+            margin: auto;
+            padding:20px 20px;
+        }
+        
+        .pagebtns {
+            width: 900px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            position: relative;
+            /* left: 35.5%; */
+            margin: auto;
+            margin-top: 20px;
+        }
+        
+        .pagebtns a {
+            text-decoration: none;
+            color: #3dbff3;
+            font-size: 22px;
+            font-weight: 600;
+            box-shadow: 1px 2px 4px 4px rgb(83 82 82);
+            padding: 10px 20px;
+            background:none;
+        }
+        
+        @media(max-width:900px) {
+            .post {
+                width: 400px;
+            }
+            .pagebtns {
+                width: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    {% for post in posts %}
+    <div class="post" methods='GET'>
+        <div class="content">
+            <h1><a href="/fullcode/{{post.slug}}">{{post.title}}</a></h1>
+            <p>{{post.content}}</p>
+            <span>Posted on {{post.date}}</span>
+            <hr>
+        </div>
+    </div>
+    {% endfor %}
+    
+    <div class="pagebtns">
+        <a href="{{prev}}">&larr;Previous</a>
+        <a href="{{next}}">Next&rarr;</a>
+    </div>
+</body>
+
+</html>
+{% endblock %}

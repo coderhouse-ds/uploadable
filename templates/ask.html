@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASK</title>
+    <style>
+        body {
+            background: rgb(29, 29, 29);
+        }
+        
+        h1 {
+            color: white;
+            font-size: 50px;
+            text-decoration: none;
+            background: none;
+            text-align: center;
+        }
+        
+        #pagebtns {
+            width: 650px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            position: relative;
+            /* left: 35.5%; */
+            margin: auto;
+            margin-top: 20px;
+        }
+        
+        #pagebtns a {
+            text-decoration: none;
+            color: #3dbff3;
+            font-size: 29px;
+            font-weight: 600;
+            box-shadow: 1px 2px 4px 4px rgb(83 82 82);
+            padding: 15px 25px;
+            background: none;
+        }
+        
+        @media(max-width:900px) {
+            h1 {
+                font-size: 40px;
+            }
+            #pagebtns {
+                width: 200px;
+                display: flex;
+                flex-direction: column;
+                /* justify-content: space-between; */
+                /* position: relative; */
+                margin: auto;
+            }
+            #pagebtns a {
+                font-size: 20px;
+                font-weight: 600;
+                box-shadow: 1px 2px 4px 4px rgb(83 82 82);
+                padding: 15px 15px;
+                background: none;
+            }
+            #pagebtns #second {
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>What would you like to watch?</h1>
+    <div id="pagebtns">
+        <a href="/javascript/showinfo">Learning tutorials</a>
+        <a href="/pr/showinfo" id="second">Projects</a>
+    </div>
+</body>
+
+</html>

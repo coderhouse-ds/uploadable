@@ -1,0 +1,11 @@
+{
+  "params": {
+    "local_server": "True",
+    "local_uri": "mysql://root:@localhost/reference",
+    "prod_uri":"mysql://root:@localhost/reference",
+    "fb_url":"https://facebook.com/reference",
+    "tw_url":"https://twitter.com/reference",
+    "gh_url": "https://github.com/reference",
+    "no_of_posts": 3
+  }
+}
