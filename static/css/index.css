@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
 * {
     padding: 0;
     margin: 0;
@@ -119,11 +120,13 @@ a:hover {
 
 .heading {
     color: white;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: 900;
     text-align: center;
     margin-top: 100px;
     padding: 15px 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 2.5px;
 }
 
 .banner {
@@ -135,11 +138,13 @@ a:hover {
 
 .banner .bantitle {
     color: white;
-    font-size: 48px;
+    font-size: 45px;
     text-align: center;
     font-weight: bolder;
     border: 3px solid white;
     padding: 10px 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 2px;
 }
 
 .banner .bantitle::first-letter {
@@ -516,12 +521,14 @@ width:200px;
 
 .categories h1 {
     color: white;
-    font-size: 48px;
+    font-size: 45px;
     text-align: center;
     font-weight: bolder;
     border: 3px solid white;
     padding: 10px 10px;
     margin-top: 100px;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 2px;
 }
 
 .categories h1::first-letter {

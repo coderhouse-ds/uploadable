@@ -1,8 +1,12 @@
+import json
 import math
 from datetime import date
+
 from flask import Flask, render_template, request
-import json
 from flask_sqlalchemy import SQLAlchemy
+import pymysql
+pymysql.install_as_MySQLdb()
+
 
 with open('config.json','r') as c:
     params = json.load(c)["params"]
@@ -27,9 +31,9 @@ class Posts(db.Model):
     code1_title = db.Column(db.String(70),nullable=False)
     code1 = db.Column(db.String(100000),nullable=False)
     code2_title = db.Column(db.String(70), nullable=True)
-    code2 = db.Column(db.String(1000), nullable=True)
+    code2 = db.Column(db.String(100000), nullable=True)
     code3_title = db.Column(db.String(70), nullable=True)
-    code3 = db.Column(db.String(1000), nullable=True)
+    code3 = db.Column(db.String(100000), nullable=True)
 
 @app.route("/")
 def home():
@@ -73,7 +77,7 @@ def webdevelopmentlt():
     return render_template('showinfo.html', params=params, posts=posts,prev=prev,next=next)
 @app.route("/webdevelopment/pr/showinfo",methods=['GET'])
 def webdevelopmentpr():
-    posts = Posts.query.filter(Posts.category=='webdevlopmetpr')
+    posts = Posts.query.filter(Posts.category=='webdevlopmetpr').all()
     last = math.ceil(len(posts) / int(params['no_of_posts']))
 
     page = request.args.get('page')
@@ -96,7 +100,7 @@ def webdevelopmentpr():
 
 @app.route("/python/lt/showinfo",methods=['GET'])
 def pythonlt():
-    posts = Posts.query.filter(Posts.category=='pythonlt')
+    posts = Posts.query.filter(Posts.category=='pythonlt').all()
     last = math.ceil(len(posts) / int(params['no_of_posts']))
 
     page = request.args.get('page')
@@ -119,7 +123,7 @@ def pythonlt():
 
 @app.route("/python/pr/showinfo",methods=['GET'])
 def pythonpr():
-    posts = Posts.query.filter(Posts.category=='pythonpr')
+    posts = Posts.query.filter(Posts.category=='pythonpr').all()
     last = math.ceil(len(posts) / int(params['no_of_posts']))
 
     page = request.args.get('page')
@@ -142,7 +146,7 @@ def pythonpr():
 
 @app.route("/tkinter/lt/showinfo",methods=['GET'])
 def tkinterlt():
-    posts = Posts.query.filter(Posts.category=='tkinterlt')
+    posts = Posts.query.filter(Posts.category=='tkinterlt').all()
     last = math.ceil(len(posts) / int(params['no_of_posts']))
 
     page = request.args.get('page')
@@ -165,7 +169,7 @@ def tkinterlt():
 
 @app.route("/tkinter/pr/showinfo",methods=['GET'])
 def tkinterpr():
-    posts = Posts.query.filter(Posts.category=='tkinterpr')
+    posts = Posts.query.filter(Posts.category=='tkinterpr').all()
     last = math.ceil(len(posts) / int(params['no_of_posts']))
 
     page = request.args.get('page')
@@ -188,7 +192,7 @@ def tkinterpr():
 
 @app.route("/javacore/lt/showinfo",methods=['GET'])
 def javacorelt():
-    posts = Posts.query.filter(Posts.category=='javacorelt')
+    posts = Posts.query.filter(Posts.category=='javacorelt').all()
     last = math.ceil(len(posts) / int(params['no_of_posts']))
 
     page = request.args.get('page')
@@ -211,7 +215,7 @@ def javacorelt():
 
 @app.route("/javacore/pr/showinfo",methods=['GET'])
 def javacorepr():
-    posts = Posts.query.filter(Posts.category=='javacorepr')
+    posts = Posts.query.filter(Posts.category=='javacorepr').all()
     last = math.ceil(len(posts) / int(params['no_of_posts']))
 
     page = request.args.get('page')
@@ -234,7 +238,7 @@ def javacorepr():
 
 @app.route("/c/lt/showinfo",methods=['GET'])
 def clt():
-    posts = Posts.query.filter(Posts.category=='clt')
+    posts = Posts.query.filter(Posts.category=='clt').all()
     last = math.ceil(len(posts) / int(params['no_of_posts']))
 
     page = request.args.get('page')
@@ -257,7 +261,7 @@ def clt():
 
 @app.route("/c/pr/showinfo",methods=['GET'])
 def cpr():
-    posts = Posts.query.filter(Posts.category=='cpr')
+    posts = Posts.query.filter(Posts.category=='cpr').all()
     last = math.ceil(len(posts) / int(params['no_of_posts']))
 
     page = request.args.get('page')
@@ -280,7 +284,7 @@ def cpr():
 
 @app.route("/javascript/lt/showinfo",methods=['GET'])
 def javascriptlt():
-    posts = Posts.query.filter(Posts.category=='javascriptlt')
+    posts = Posts.query.filter(Posts.category=='javascriptlt').all()
     last = math.ceil(len(posts) / int(params['no_of_posts']))
 
     page = request.args.get('page')
@@ -303,7 +307,7 @@ def javascriptlt():
 
 @app.route("/javascript/pr/showinfo",methods=['GET'])
 def javascriptpr():
-    posts = Posts.query.filter(Posts.category=='javascriptpr')
+    posts = Posts.query.filter(Posts.category=='javascriptpr').all()
     last = math.ceil(len(posts) / int(params['no_of_posts']))
 
     # [0:params['no_of_posts']]
